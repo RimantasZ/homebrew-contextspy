@@ -4,6 +4,9 @@ class Contextspy < Formula
   version "0.1.0"
   license "Apache-2.0"
 
+  # Pre-built binary — no compilation step, no bottles needed.
+  bottle :unneeded
+
   on_macos do
     on_arm do
       url "https://github.com/rimantas/contextspy/releases/download/v#{version}/contextspy-macos-arm64.tar.gz"
@@ -24,6 +27,15 @@ class Contextspy < Formula
 
   def install
     bin.install "contextspy"
+  end
+
+  def caveats
+    on_macos do
+      <<~EOS
+        The binary is not code-signed. If macOS Gatekeeper blocks it on first run:
+          xattr -d com.apple.quarantine #{bin}/contextspy
+      EOS
+    end
   end
 
   test do
