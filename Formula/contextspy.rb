@@ -1,7 +1,7 @@
 class Contextspy < Formula
   desc "LLM proxy that analyses token usage in context windows"
   homepage "https://github.com/RimantasZ/contextspy"
-  version "0.1.0"
+  version "0.1.1"
   license "Apache-2.0"
 
   # Pre-built binary — no compilation step, no bottles needed.
