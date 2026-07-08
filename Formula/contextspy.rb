@@ -1,20 +1,20 @@
 class Contextspy < Formula
   desc "LLM proxy that analyses token usage in context windows"
   homepage "https://github.com/RimantasZ/contextspy"
-  version "0.2.1"
+  version "0.3.0"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
       url "https://github.com/RimantasZ/contextspy/releases/download/v#{version}/contextspy-macos-arm64.tar.gz"
-      sha256 "9a659d7fd18b70de28d6e78bef75dfb7b3cb2c0ae81b3a984f8e94d512350cea"
+      sha256 "be5597d2d52c78cfa2a7dd7450905b95a6c5ecba454d6c3d40d89eec51c81eb5"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/RimantasZ/contextspy/releases/download/v#{version}/contextspy-linux-x86_64.tar.gz"
-      sha256 "8e8ab670cf9e9d0084f7adb352c8890dacf0acd61b508d91405c773160d1d7f6"
+      sha256 "b5f3348c8377c2ac1081acb5ae961409118f793b6190a96ef4f5c883f209eee7"
     end
   end
 
